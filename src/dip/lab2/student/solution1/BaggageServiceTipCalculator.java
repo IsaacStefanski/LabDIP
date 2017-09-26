@@ -3,12 +3,7 @@ package dip.lab2.student.solution1;
 import dip.lab2.*;
 
 /**
- * An example low-level class. Does this class definition follow the DIP?
- * If not, fix it.
- *
- * Any other best practice violations? Fix them too.
- *
- * @author your name goes here
+ * @author Isaac Stefanski
  */
 public class BaggageServiceTipCalculator implements TipCalculator {
     private static final double MIN = 0.00;
@@ -27,6 +22,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         return baseTipPerBag * bagCount * (1 + tipPercentage);
     }
 
+    @Override
     public final void setTipPercentage(double tipPercentage) {
         if (tipPercentage > MIN){
             this.tipPercentage = tipPercentage;
@@ -35,6 +31,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         }
     }
 
+    @Override
     public final double getTipPercentage() {
         return tipPercentage;
     }
