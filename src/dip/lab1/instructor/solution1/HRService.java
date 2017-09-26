@@ -13,7 +13,7 @@ public class HRService {
     // the actual work. Somehow this component needs to be initialized, or
     // we could use a method that let's us pass it in. Or, maybe we don't
     // need this at all. Read all the comments below.
-//    private Employee employee;
+    private Employee employee;
     
     /*
      * This guarantees that an employee object will be initialized. It's one
@@ -22,9 +22,9 @@ public class HRService {
      * employee argument and dispenses with the need for a employee property.
      * Then this kind of constructor is unnecessary.
      */
-//    public HRService(Employee e) {
-//        employee = e;
-//    }
+    public HRService(Employee e) {
+        employee = e;
+    }
     
     /*
      * The default constructor initializes nothing. If we're going to use it
@@ -49,13 +49,13 @@ public class HRService {
      * Notice that the second method has no parameters, therefore, it assumes
      * the employee has already been set -- fragile!
      */
-//     public void setEmployee(Employee e) {
-//        if(e == null) {
-//            throw new NullPointerException();
-//        }
-//        
-//        employee = e;
-//    }
+     public void setEmployee(Employee e) {
+        if(e == null) {
+            throw new NullPointerException();
+        }
+        
+        employee = e;
+    }
     
     /*
      * This is dangerous because it assumes the employee object has already
@@ -63,9 +63,9 @@ public class HRService {
      * we could guarantee that (but don't include the default constructor then
      * or you give people a choice).
      */
-//    public double getAnnualCompensationForEmployee() {
-//        return employee.getAnnualWages();
-//    }
+    public double getAnnualCompensationForEmployee() {
+        return employee.getAnnualWages();
+    }
     
     /*
      * This is the simplest option. Just pass the employee object which
@@ -83,9 +83,9 @@ public class HRService {
      * What's important is not how we get the delegate into the high-level 
      * class, but that it is polymorphic and all work is done by the delegate.
      */
-    public double getAnnualCompensationForEmployee(Employee e) {
-        return e.getAnnualWages();
-    }
+//    public double getAnnualCompensationForEmployee(Employee e) {
+//        return e.getAnnualWages();
+//    }
 }
 
 
