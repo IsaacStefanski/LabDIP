@@ -60,5 +60,4 @@ public class FoodServiceTipCalculator {
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
-
 }
