@@ -9,6 +9,10 @@ package dip.lab3.student.solution1;
  *
  * @author Isaac
  */
-public class ConsoleOutput {
-    
+public class ConsoleOutput implements Output{
+    @Override
+    public void outputMessage(String line) {
+        System.out.println("Message:");
+        System.out.println(line);
+    }
 }
