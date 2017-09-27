@@ -18,7 +18,7 @@ public class FileInput implements Input{
     
     @Override
     public String receiveMessage() {
-        File data = new File(File.separator + "messages.txt");
+        File data = new File("E:\\WCTC\\Fall 2017 August-December\\2) Advanced Java\\LabDIP\\LabDIP\\messages.txt");
 
 	BufferedReader in = null;
 	String line = null;
