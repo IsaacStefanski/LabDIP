@@ -6,8 +6,8 @@ import dip.lab2.*;
  * @author Isaac Stefanski
  */
 public class FoodServiceTipCalculator implements TipCalculator {
-    private static final double MIN = 0.00;
-    private static final String BILL_ENTRY_ERR = "Error: bill must be above $" + MIN;
+    private double min = 0.00;
+    private String BILL_ENTRY_ERR = "Error: bill must be above $" + min;
     private double tipPercentage;
     private double bill;
 
@@ -23,10 +23,10 @@ public class FoodServiceTipCalculator implements TipCalculator {
     
     @Override
     public final void setTipPercentage(double tipPercentage) {
-        if (tipPercentage > MIN){
+        if (tipPercentage > min){
             this.tipPercentage = tipPercentage;
         } else {
-            throw new IllegalArgumentException("Enter a tip above" + MIN + "%");
+            throw new IllegalArgumentException("Enter a tip above" + min + "%");
         }
     }
 
@@ -36,7 +36,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
     }
 
     public final void setBill(double billAmt) {
-        if(billAmt < MIN) {
+        if(billAmt < min) {
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         bill = billAmt;

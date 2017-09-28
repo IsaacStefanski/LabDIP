@@ -6,7 +6,7 @@ import dip.lab2.*;
  * @author Isaac Stefanski
  */
 public class BaggageServiceTipCalculator implements TipCalculator {
-    private static final double MIN = 0.00;
+    private double min = 0.00;
     private double tipPercentage;
     private double baseTipPerBag;
     private int bagCount;
@@ -24,10 +24,10 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     @Override
     public final void setTipPercentage(double tipPercentage) {
-        if (tipPercentage > MIN){
+        if (tipPercentage > min){
             this.tipPercentage = tipPercentage;
         } else {
-            throw new IllegalArgumentException("Enter a tip above" + MIN + "%");
+            throw new IllegalArgumentException("Enter a tip above" + min + "%");
         }
     }
 
