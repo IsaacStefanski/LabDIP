@@ -8,18 +8,22 @@ public class TipService {
     private TipCalculator calc;
 
     public TipService(TipCalculator calc) {
-        this.calc = calc;
+        setCalc(calc);
     }
     
-    public double calcTip(){
+    public final double calcTip(){
         return calc.getTip();
     }
     
-    public TipCalculator getCalc() {
+    public final TipCalculator getCalc() {
         return calc;
     }
 
-    public void setCalc(TipCalculator calc) {
-        this.calc = calc;
+    public final void setCalc(TipCalculator calc) {
+        if(calc != null){
+            this.calc = calc;
+        } else {
+            throw new IllegalArgumentException("Calculator cannot be null");
+        }
     }    
 }

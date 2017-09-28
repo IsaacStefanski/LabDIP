@@ -18,7 +18,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     }
 
     @Override
-    public double getTip() {
+    public final double getTip() {
         return baseTipPerBag * bagCount * (1 + tipPercentage);
     }
 
