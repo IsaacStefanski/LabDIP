@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class KeyboardInput implements Input{
     @Override
-    public String receiveMessage() {
+    public final String receiveMessage() {
         System.out.println("Type message, then press enter:");
 
         Scanner input = new Scanner(System.in);

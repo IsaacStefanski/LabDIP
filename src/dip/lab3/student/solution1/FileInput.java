@@ -17,7 +17,7 @@ public class FileInput implements Input{
     private boolean lineReadFlag = false;
     
     @Override
-    public String receiveMessage() {
+    public final String receiveMessage() {
         File data = new File("E:\\WCTC\\Fall 2017 August-December\\2) Advanced Java\\LabDIP\\LabDIP\\messages.txt");
 
 	BufferedReader in = null;

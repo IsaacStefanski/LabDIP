@@ -18,7 +18,7 @@ public class MessageService {
         this.output = output;
     }
     
-    public void beginMessaging() {
+    public final void beginMessaging() {
         String msg = input.receiveMessage();
         output.outputMessage(msg);
     }
