@@ -7,7 +7,6 @@ import dip.lab2.*;
  */
 public class FoodServiceTipCalculator implements TipCalculator {
     private double min = 0.00;
-    private String BILL_ENTRY_ERR = "Error: bill must be above $" + min;
     private double tipPercentage;
     private double bill;
 
@@ -37,7 +36,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     public final void setBill(double billAmt) {
         if(billAmt < min) {
-            throw new IllegalArgumentException(BILL_ENTRY_ERR);
+            throw new IllegalArgumentException("Error: bill must be above $" + min);
         }
         bill = billAmt;
     }
