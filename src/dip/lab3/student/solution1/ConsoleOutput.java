@@ -11,8 +11,8 @@ package dip.lab3.student.solution1;
  */
 public class ConsoleOutput implements Output{
     @Override
-    public void outputMessage(String line) {
+    public void outputMessage(String text) {
         System.out.println("Message:");
-        System.out.println(line);
+        System.out.println(text);
     }
 }

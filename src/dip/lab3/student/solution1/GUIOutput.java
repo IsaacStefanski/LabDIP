@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class GUIOutput implements Output{
     @Override
-    public final void outputMessage(String line) {
-        JOptionPane.showConfirmDialog(null, line);
+    public final void outputMessage(String text) {
+        JOptionPane.showConfirmDialog(null, text);
     }
 }
