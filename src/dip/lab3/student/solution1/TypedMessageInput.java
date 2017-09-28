@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Isaac
  */
-public class KeyboardInput implements Input{
+public class TypedMessageInput implements MessageInput{
     @Override
     public final String receiveMessage() {
         System.out.println("Type message, then press enter:");

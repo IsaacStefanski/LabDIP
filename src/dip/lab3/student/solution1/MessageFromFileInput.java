@@ -13,7 +13,7 @@ import java.io.IOException;
  *
  * @author Isaac
  */
-public class FileInput implements Input{
+public class MessageFromFileInput implements MessageInput{
     private boolean lineReadFlag = false;
     
     @Override

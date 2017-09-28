@@ -9,6 +9,6 @@ package dip.lab3.student.solution1;
  *
  * @author Isaac
  */
-public interface Input {
+public interface MessageInput {
     public abstract String receiveMessage();
 }

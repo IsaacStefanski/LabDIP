@@ -10,16 +10,40 @@ package dip.lab3.student.solution1;
  * @author Isaac
  */
 public class MessageService {
-    private Input input;
-    private Output output;
+    private MessageInput messageInput;
+    private MessageOutput messageOutput;
     
-    public MessageService(Input input, Output output){
-        this.input = input;
-        this.output = output;
+    public MessageService(MessageInput input, MessageOutput output){
+        setMessageInput(input);
+        setMessageOutput(output);
     }
     
     public final void beginMessaging() {
-        String msg = input.receiveMessage();
-        output.outputMessage(msg);
+        String msg = messageInput.receiveMessage();
+        messageOutput.outputMessage(msg);
+    }
+
+    public MessageInput getMessageInput() {
+        return messageInput;
+    }
+
+    public void setMessageInput(MessageInput messageInput) {
+        if(messageInput != null){
+            this.messageInput = messageInput;
+        } else {
+            throw new IllegalArgumentException("MEssage Input cannot be null");
+        }
+    }
+
+    public MessageOutput getMessageOutput() {
+        return messageOutput;
+    }
+
+    public void setMessageOutput(MessageOutput messageOutput) {
+        if(messageOutput != null){
+            this.messageOutput = messageOutput;
+        } else {
+            throw new IllegalArgumentException("Message Output cannot be null");
+        }
     }
 }

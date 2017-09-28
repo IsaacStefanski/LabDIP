@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Isaac
  */
-public class GUIOutput implements Output{
+public class GUIOutput implements MessageOutput{
     @Override
     public final void outputMessage(String text) {
         JOptionPane.showConfirmDialog(null, text);
