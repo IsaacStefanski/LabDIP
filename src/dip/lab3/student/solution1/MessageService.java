@@ -31,7 +31,7 @@ public class MessageService {
         if(messageInput != null){
             this.messageInput = messageInput;
         } else {
-            throw new IllegalArgumentException("MEssage Input cannot be null");
+            throw new IllegalArgumentException("Message Input cannot be null");
         }
     }
 
